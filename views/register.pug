@@ -1,0 +1,15 @@
+
+extends layout
+
+block content
+  h1 Register for a new account
+  form(action="/auth/register", method="POST")
+    label(for="name") Name:
+    input(type="text", name="name", id="name", required)
+    label(for="email") Email:
+    input(type="email", name="email", id="email", required)
+    label(for="password") Password:
+    input(type="password", name="password", id="password", required)
+    label(for='confirmPassword') Confirm Password:
+    input(type='password' name='confirmPassword' id='confirmPassword' required)
+    button(type="submit") Register

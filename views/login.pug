@@ -1,0 +1,12 @@
+
+extends layout
+
+block content
+  h1 Login to your account
+  form(action="/auth/login", method="POST")
+    label(for="email") Email:
+    input(type="email", name="email", id="email", required)
+    label(for="password") Password:
+    input(type="password", name="password", id="password", required)
+    button(type="submit") Login
+a(href='/auth/register') Register

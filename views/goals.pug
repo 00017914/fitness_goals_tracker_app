@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Your Goals
+  ul
+    each goal in goals
+      li #{goal.title} - #{goal.status}
+
+  form(action="/goals" method="POST")
+    input(type="text" name="title" placeholder="Goal Title" required)
+    input(type="date" name="targetDate" required)
+    button(type="submit") Add Goal
